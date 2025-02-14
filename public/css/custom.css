@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #4F46E5;    
+    --secondary-color: #312E81;  
+    --text-dark: #111827;      
+    --text-light: #F9FAFB;      
+    --gradient-start: #6366F1;  
+    --gradient-end: #4338CA;   
+    --error: #DC2626;       
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #F3F4F6;  
+    line-height: 1.6;
+}
+
+.login-header {
+    background: linear-gradient(
+        135deg,
+        var(--gradient-start),
+        var(--gradient-end)
+    );
+    min-height: 120px;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-header h1 {
+    color: var(--text-light);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-header p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+    opacity: 0.9;
+}
+
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #E0E7FF, #C7D2FE, #DDD6FE);
+    padding: 2rem 0;
+}
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+.form-control {
+    border: 1px solid #E5E7EB;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-1px);
+}
+
+
+.login-page a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.login-page a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+
+.alert-danger {
+    background-color: #FEE2E2;
+    border: none;
+    border-left: 4px solid var(--error);
+    border-radius: 0.8rem;
+    color: #991B1B;
+    padding: 1rem 1.25rem;
+}
+
+
+.form-text {
+    color: #6B7280;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}

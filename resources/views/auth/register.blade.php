@@ -64,6 +64,10 @@
                                 </select>
                             </div>
 
+
+                            <a href="{{ route('login') }}" class="btn btn-secondary w-100 mb-3">
+                                Regresar
+                            </a>
                             <button type="submit" class="btn btn-primary w-100">
                                 Registrar
                             </button>
