@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.login')
 
 @section('title', 'Iniciar Sesión')
 
@@ -49,7 +49,7 @@
                             </form>
 
                             <div class="text-center">
-                                <p class="mb-0">¿No tienes cuenta?
+                                <p class="mb-0">
                                     <a href="{{ route('register') }}">Regístrate aquí</a>
                                 </p>
                             </div>

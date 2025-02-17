@@ -14,19 +14,19 @@ body {
     line-height: 1.6;
 }
 
-.login-header {
+.header {
     background: linear-gradient(
         135deg,
         var(--gradient-start),
         var(--gradient-end)
     );
-    min-height: 120px;
+    min-height: 80px;
     padding: 4rem 0;
     position: relative;
     overflow: hidden;
 }
 
-.login-header h1 {
+.header h1 {
     color: var(--text-light);
     font-size: 2.5rem;
     font-weight: 700;
@@ -34,15 +34,7 @@ body {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.login-header p {
-    color: var(--text-light);
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 1rem;
-    opacity: 0.9;
-}
-
-.login-page {
+.login-page{
     min-height: 100vh;
     background: linear-gradient(135deg, #E0E7FF, #C7D2FE, #DDD6FE);
     padding: 2rem 0;
@@ -52,31 +44,48 @@ body {
     border: none;
     border-radius: 1rem;
     background-color: #FFFFFF;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
-                0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-                0 10px 10px -5px rgba(0, 0, 0, 0.04);
+.card-header{
+    background: linear-gradient(
+        135deg,
+        var(--gradient-start),
+        var(--gradient-end)
+    );
+    border-bottom: 1px solid #E5E7EB;
+    padding: 1.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
+
 
 .card-body {
     padding: 2.5rem;
 }
 
-.form-control {
+.form-control, .form-select{
     border: 1px solid #E5E7EB;
     border-radius: 0.5rem;
     padding: 0.75rem 1rem;
     transition: border-color 0.2s ease;
 }
 
-.form-control:focus {
+.form-control:focus, .form-select:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
 }
 
 
@@ -94,6 +103,26 @@ body {
     transform: translateY(-1px);
 }
 
+.btn-warning {
+    background-color: #FCD34D;
+    border: none;
+    color: #92400E;
+}
+
+.btn-warning:hover {
+    background-color: #F59E0B;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #EF4444;
+    border: none;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #DC2626;
+}
 
 .login-page a {
     color: var(--primary-color);
@@ -122,4 +151,88 @@ body {
     color: #6B7280;
     font-size: 0.875rem;
     margin-top: 0.5rem;
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.05);
+    min-height: 100vh;
+    padding-top: 1rem;
+}
+
+.sidebar .nav-link {
+    color: var(--text-dark);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    margin: 0.25rem 0.75rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+}
+
+.sidebar .nav-link.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.sidebar .nav-link i {
+    font-size: 1.25rem;
+}
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.tarjeta-estadisticas {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta-estadisticas h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.tarjeta-estadisticas .number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+}
+
+.tarjeta-estadisticas.bi {
+    opacity: 0.8;
+}
+
+.stats-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.9;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.prestamos-activos {
+    background: linear-gradient(135deg, #00D1E8, #00A3B4);
+}
+
+.prestamos-vencidos {
+    background: linear-gradient(135deg, #FFC107, #FF9800);
+}
+
+.libros-disponibles {
+    background: linear-gradient(135deg, #16A34A, #15803D);
 }

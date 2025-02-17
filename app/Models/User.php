@@ -23,4 +23,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
     ];
+
+    public function loans()
+    {
+        return $this->hasMany(Loan::class, 'id_cliente');
+    }
 }

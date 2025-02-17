@@ -17,7 +17,7 @@ class AuthController extends Controller
   
     public function login(Request $request)
     {
-        // Validar los datos recibidos
+        
         $request->validate([
             'username' => 'required|string',
             'password' => 'required|string',
@@ -31,8 +31,8 @@ class AuthController extends Controller
         
             $request->session()->regenerate();
 
-           
-            return redirect()->intended('dashboard');
+        
+            return redirect()->intended(route('dashboard.index'));
         }
 
 
@@ -49,8 +49,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-
-
         return redirect('/login');
     }
 
@@ -65,6 +63,7 @@ class AuthController extends Controller
     $request->validate([
         'username' => 'required|string|unique:usuarios',
         'password' => 'required|string',
+        'confirm_password' => 'required|same:password',
         'nombre' => 'required|string',
         'apellidos' => 'required|string',
         'correo' => 'required|email|unique:usuarios',
